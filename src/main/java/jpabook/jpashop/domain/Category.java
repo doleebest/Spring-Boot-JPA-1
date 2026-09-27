@@ -24,7 +24,7 @@ public class Category {
     inverseJoinColumns = @JoinColumn(name = "item_id"))
     private List<Item> items;
 
-    @ManyToOne
+    @ManyToOne (fetch = FetchType.LAZY)
     @JoinColumn(name="parent_id")
     private Category parent;
 
